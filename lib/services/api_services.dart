@@ -64,6 +64,7 @@ class ApiService {
       var response = await http.get(uri, headers: headers);
       //decode the body of the response into a map
       Map<String, dynamic> data = json.decode(response.body);
+      print(data);
       //convert the map into a MealPlan Object using the factory constructor,
       //MealPlan.fromMap
       MealPlan mealPlan = MealPlan.fromMap(data);

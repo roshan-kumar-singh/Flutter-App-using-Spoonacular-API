@@ -4,8 +4,8 @@ import 'meal_model.dart';
 
 class MealPlan {
   //MealPlan class has a list of meals and nutritional info about the meal plan
-  final List<Meal> meals;
-  final double calories, carbs, fat, protein;
+  late List<Meal> meals;
+  late double calories, carbs, fat, protein;
 
   MealPlan({
     required this.meals,

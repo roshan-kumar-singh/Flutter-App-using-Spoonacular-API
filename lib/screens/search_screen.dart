@@ -34,8 +34,6 @@ class _SearchScreenState extends State<SearchScreen> {
   double _targetCalories = 2250;
   String _diet = 'None';
 
-  @override
-
   //This method generates a MealPlan by parsing our parameters into the
   //ApiService.instance.generateMealPlan.
   //It then pushes the Meal Screen onto the stack with Navigator.push
@@ -50,6 +48,7 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
 
+  @override
   Widget build(BuildContext context) {
     /*
     Our build method returns Scaffold Container, which has a decoration
@@ -158,14 +157,17 @@ class _SearchScreenState extends State<SearchScreen> {
                 //Space
                 const SizedBox(height: 30),
                 TextButton(
-
+                //_searchMealPlan
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.all(16.0),
                     textStyle: const TextStyle(fontSize: 20),
                   ),
-
-                  onPressed:  _searchMealPlan,
+                  onPressed:  (){
+                    setState(() {
+                    _searchMealPlan();
+                  });
+                    },
                   child: const Text(
                     'Search', style: TextStyle(
                     color: Colors.black,

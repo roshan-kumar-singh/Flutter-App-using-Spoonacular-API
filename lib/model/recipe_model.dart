@@ -3,7 +3,7 @@ in our webview
 */
 
 class Recipe {
-  final String spoonacularSourceUrl;
+  late String spoonacularSourceUrl;
 
   //has Equipment, Ingredients, Steps, e.t.c
 
